@@ -6,7 +6,7 @@ use sha1::Sha1;
 use std::convert::TryInto;
 
 #[derive(Debug, Clone)]
-pub struct TwoFactorSecret(Secret<[u8; 20]>);
+pub struct TwoFactorSecret(pub Secret<[u8; 20]>);
 
 impl Default for TwoFactorSecret {
 	fn default() -> Self {
